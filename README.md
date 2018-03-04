@@ -13,5 +13,5 @@ Simple Xamarin Forms Demo (NETStandard) with Prism MVVM, DryIoc Container
 * Display Alert Async (yes/no)
 
 ## Notes
-* Please note: JSON files must be saved as UTF8 without BOM (German language) and must be marked in XF as EmbeddedResource!
+* Please note: JSON files must be saved as UTF8 without BOM (for language German) and must be marked in XF as EmbeddedResource!
 
