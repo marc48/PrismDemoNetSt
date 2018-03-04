@@ -1,0 +1,84 @@
+{
+  "Books": [
+    {
+      "Id": 13,
+      "Title": "Knockemstiff",
+      "Author": "Pollock",
+      "FirstName": "Donald R.",
+      "Year": 2008,
+      "Read": true
+    },
+    {
+      "Id": 14,
+      "Title": "Fear of flying",
+      "Author": "Jong",
+      "FirstName": "Erica",
+      "Year": 2003,
+      "Read": true
+    },
+    {
+      "Id": 15,
+      "Title": "Jakob von Gunten",
+      "Author": "Walser",
+      "FirstName": "Robert",
+      "Year": 1910,
+      "Read": false
+    },
+    {
+      "Id": 16,
+      "Title": "Into the wild",
+      "Author": "Krakauer",
+      "FirstName": "Jon",
+      "Year": 1996,
+      "Read": true
+    },
+    {
+      "Id": 17,
+      "Title": "The women",
+      "Author": "Boyle",
+      "FirstName": "T.C.",
+      "Year": 2010,
+      "Read": true
+    },
+    {
+      "Id": 18,
+      "Title": "Jakob von Gunten",
+      "Author": "Walser",
+      "FirstName": "Robert",
+      "Year": 1909,
+      "Read": false
+    },
+    {
+      "Id": 19,
+      "Title": "Narrenschicksal",
+      "Author": "Lennart",
+      "FirstName": "Ava",
+      "Year": 2016,
+      "Read": true
+    },
+    {
+      "Id": 20,
+      "Title": "Lexical analysis",
+      "Author": "Hanks",
+      "FirstName": "Patrick",
+      "Year": 2013,
+      "Read": true
+    },
+    {
+      "Id": 21,
+      "Title": "Sociolinguistic patterns",
+      "Author": "Labov",
+      "FirstName": "William",
+      "Year": 1972,
+      "Read": true
+    },
+    {
+      "Id": 22,
+      "Title": "White teeth",
+      "Author": "Smith",
+      "FirstName": "Zadie",
+      "Year": 2000,
+      "Read": true
+    }
+  ]
+}

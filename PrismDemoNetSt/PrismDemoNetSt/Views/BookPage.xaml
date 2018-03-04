@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="PrismDemoNetSt.Views.BookPage"
+             Title="Book Details">
+
+  <StackLayout Padding="20">
+    <Label Text="{Binding Book.Title}" FontSize="Large" LineBreakMode="WordWrap">
+      <Label.IsVisible>
+        <OnPlatform x:TypeArguments="x:Boolean" iOS="False" Android="False" WinPhone="True" />
+      </Label.IsVisible>
+    </Label>
+
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Title: " FontSize="Medium" FontAttributes="Italic" />
+      <Label Text="{Binding Book.Title}" FontSize="Medium" LineBreakMode="WordWrap" />
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Year: " FontSize="Medium" FontAttributes="Italic" />
+      <Label Text="{Binding Book.Year}" FontSize="Medium" />
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Author: " FontSize="Medium" FontAttributes="Italic" />
+      <Label Text="{Binding Book.FirstName}" FontSize="Medium" />
+      <Label Text="{Binding Book.Author}" FontSize="Medium" />
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="ID / Read: " FontSize="Medium" FontAttributes="Italic"/>
+      <Label Text="{Binding Book.Id}" FontSize="Medium"/>
+      <Label Text="{Binding Book.Read}" FontSize="Medium"/>
+    </StackLayout>
+    <StackLayout Padding="0,30,0,0">
+      <Button Text="Question" Command="{Binding ReadBookCommand}" BackgroundColor="Gray" TextColor="Wheat" />
+    </StackLayout>
+  </StackLayout>
+</ContentPage>

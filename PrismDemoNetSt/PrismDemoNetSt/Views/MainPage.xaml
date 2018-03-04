@@ -1,11 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms" 
              x:Class="PrismDemoNetSt.Views.MainPage"
-             Title="{Binding Title}">
+             Title="XF Prism DryIoc Demo">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
+  <StackLayout Padding="10">
+    <ListView ItemsSource="{Binding Books}" SeparatorVisibility="None">
+      <ListView.Behaviors>
+        <b:EventToCommandBehavior Command="{Binding BookSelectedCommand}"
+                                        EventName="ItemTapped"
+                                        EventArgsParameterPath="Item" />
+      </ListView.Behaviors>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <!-- <TextCell Text="{Binding Name}" Detail="{Binding FirstName}" />  simple version without ViewCell -->
+          <ViewCell>
+            <ContentView Padding="5">
+              <Frame OutlineColor="PeachPuff" Padding="5" HasShadow="False">
+                <StackLayout Orientation="Horizontal">
+                  <Label Text="{Binding Title}" FontAttributes="Italic"/>
+                  <Label Text="{Binding Year}" />
+                  <Label Text="{Binding FirstName}" />
+                  <Label Text="{Binding Author}" />
+                </StackLayout>
+              </Frame>
+            </ContentView>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+    <StackLayout>
+      <Label Text="{Binding MainText}" HorizontalOptions="Center" FontSize="Small" />
+      <Button Text="Add Book" Command="{Binding AddBookCommand}" BackgroundColor="Gray" TextColor="Wheat" />
+      <Button Text="Reload Books" Command="{Binding LoadJsonCommand}" BackgroundColor="Gray" TextColor="Wheat" />
     </StackLayout>
+  </StackLayout>
 
 </ContentPage>

@@ -5,6 +5,7 @@ using PrismDemoNetSt.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Prism.DryIoc;
+using PrismDemoNetSt.Services;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace PrismDemoNetSt
@@ -31,6 +32,9 @@ namespace PrismDemoNetSt
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<BookPage>();
+
+            containerRegistry.Register<IBookService, BookService>();
         }
     }
 }
