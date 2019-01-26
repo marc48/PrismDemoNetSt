@@ -8,10 +8,10 @@ using PrismDemoNetSt.Services;
 
 namespace PrismDemoNetSt.ViewModels
 {
-    public class MainPageViewModel : ViewModelBase
+    public class MainPageViewModel : ViewModelBase, INavigationAware
     {
-        readonly INavigationService _navigationService;
-        IBookService _bookService;
+        private readonly INavigationService _navigationService;
+        private IBookService _bookService;
 
         private ObservableCollection<Book> _books = new ObservableCollection<Book>();
         public ObservableCollection<Book> Books
@@ -88,15 +88,32 @@ namespace PrismDemoNetSt.ViewModels
 
         private async void OnBookSelectedCommandExecuted(Book book)
         {
-            var p = new NavigationParameters();
-            p.Add("book", book);
+            var p = new NavigationParameters
+            {
+                { "book", book }
+            };
 
             await _navigationService.NavigateAsync("BookPage", p);
         }
 
-        public async override void OnNavigatedTo(NavigationParameters parameters)
+        public async override void OnNavigatedTo(INavigationParameters parameters)
         {
             Books = new ObservableCollection<Book>(await _bookService.GetBooks());
         }
+
+        //public void OnNavigatedFrom(INavigationParameters parameters)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //public void OnNavigatedTo(INavigationParameters parameters)
+        //{
+        //    Books = new ObservableCollection<Book>(await _bookService.GetBooks());
+        //}
+
+        //public void OnNavigatingTo(INavigationParameters parameters)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

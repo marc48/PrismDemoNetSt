@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms" 
              x:Class="PrismDemoNetSt.Views.MainPage"
-             Title="XF Prism DryIoc Demo">
+             Title="XF Prism DryIoc Demo">  
 
   <StackLayout Padding="10">
     <ListView ItemsSource="{Binding Books}" SeparatorVisibility="None">
