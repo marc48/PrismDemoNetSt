@@ -2,6 +2,8 @@
 
 Simple Xamarin Forms Demo (NETStandard) with Prism MVVM, DryIoc Container
 
+Update am 26.01.2019 >>> dokumentieren !!!
+
 ## Features
 * Prism Navigation, Service
 * Starting point: Prism Template
