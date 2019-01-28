@@ -2,18 +2,18 @@
 
 Simple Xamarin Forms Demo (NETStandard) with Prism MVVM, DryIoc Container
 
-Update am 26.01.2019 >>> dokumentieren !!!
+Update on 26.01.2019 
 
 ## Features
 * Prism Navigation, Service
 * Starting point: Prism Template
-* Xamarin Forms: v2.5.0.280555, Prism.DryIoc.Forms v7.0.0.396, NETStandard v2.0.1  (2018-03-01)
-* Newtonsoft.json v11.0.1
+* Xamarin Forms: v3.4.0.1029999, Prism.DryIoc.Forms v7.1.0.431, NETStandard v2.0.3 
+* Newtonsoft.json v12.0.1
 * ListView: book list loaded from local JSON-file
 * Show details of selected item
 * On Navigation: pass parameters from one page to the second
 * Display Alert Async (yes/no)
 
 ## Notes
-* Please note: JSON files must be saved as UTF8 without BOM (for language German) and must be marked in XF as EmbeddedResource!
+* Please note: JSON files must be saved as UTF8 without BOM (for German language) and must be marked in XF as EmbeddedResource!
 
