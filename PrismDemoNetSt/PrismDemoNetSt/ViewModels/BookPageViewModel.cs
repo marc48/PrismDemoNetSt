@@ -38,7 +38,7 @@ namespace PrismDemoNetSt.ViewModels
             var answer = await _dialogService.DisplayAlertAsync("Prism: DisplayAlertAsync", "Did you read this book?", "Yes", "No");
         }
 
-        public override void OnNavigatingTo(INavigationParameters parameters)
+        public override void OnNavigatingTo(INavigationParameters parameters) 
         {
             if (parameters.ContainsKey("book"))
                 Book = (Book)parameters["book"];

@@ -16,25 +16,6 @@ namespace PrismDemoNetSt.ViewModels
             NavigationService = navigationService;
         }
 
-        // Offenbar nicht virtual???
-        // Wichtigstes Merkmal Navig... statt INavig...  !!!!
-        // I prefix nur im Interface !!!
-
-        //public virtual void OnNavigatedFrom(NavigationParameters parameters)
-        //{
-
-        //}
-
-        //public virtual void OnNavigatedTo(NavigationParameters parameters)
-        //{
-
-        //}
-
-        //public virtual void OnNavigatingTo(NavigationParameters parameters)
-        //{
-
-        //}
-
         public virtual void Destroy()
         {
 

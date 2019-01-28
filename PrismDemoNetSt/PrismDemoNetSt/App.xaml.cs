@@ -10,7 +10,7 @@ using PrismDemoNetSt.Services;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace PrismDemoNetSt
 {
-    public partial class App : PrismApplication
+    public partial class App : PrismApplication 
     {
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.

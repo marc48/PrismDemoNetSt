@@ -100,20 +100,5 @@ namespace PrismDemoNetSt.ViewModels
         {
             Books = new ObservableCollection<Book>(await _bookService.GetBooks());
         }
-
-        //public void OnNavigatedFrom(INavigationParameters parameters)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public void OnNavigatedTo(INavigationParameters parameters)
-        //{
-        //    Books = new ObservableCollection<Book>(await _bookService.GetBooks());
-        //}
-
-        //public void OnNavigatingTo(INavigationParameters parameters)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
